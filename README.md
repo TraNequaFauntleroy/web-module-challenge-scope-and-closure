@@ -68,7 +68,7 @@ function personalDice(name){
     const newRoll = Math.floor(Math.random() * 6);
     console.log(`${name} rolled a ${newRoll}`)
   }
-}
+} 
 
 const dansRoll = personalDice("Dan");
 
