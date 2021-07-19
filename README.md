@@ -59,6 +59,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+  Answer: Closure is being able to put functions together.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,8 +81,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  Answer: Line 67. That is where the personalDice function is returning another function.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+Answer: Same: the function Different: newRoll
 c. What is the lexical scope of `newRoll`? 
+  Answer: return function
 
 
 ### Task 3 - Stretch Goals

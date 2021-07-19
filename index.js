@@ -122,6 +122,12 @@ function getInningScore(inningcb) {
 
 console.log('task 4', getInningScore(inning));
 
+printTest();
+
+function printTest(){
+  console.log('TEST','this printed!');
+}
+
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
