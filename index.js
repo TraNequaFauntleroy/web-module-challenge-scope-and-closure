@@ -163,20 +163,24 @@ function scoreboard(getInningScorecb, inningcb, num) {
   const newArray= [];
   let homeScore = 0;
   let awayScore = 0;
+  let totalHome = 0;
+  let totalAway = 0;
   for (let i =0; i < num; i++) {
     homeScore = getInningScore(inning).Home;
     awayScore = getInningScore(inning).Away;
+    totalAway += awayScore;
+    totalHome += homeScore;
     newArray.push(`Inning ${i + 1}: Away ${awayScore} - Home ${homeScore}`);
   }
-  if (homeScore === awayScore) {
-    return 'This game will require extra innings';
+  if (totalHome === totalAway) {
+    return `This game will require extra innings Away:${totalAway} - Home: ${totalHome}`;
   } else {
-    newArray.push(`Final Score: Away:${awayScore} - Home: ${homeScore}`);
+    newArray.push(`Final Score: Away:${totalAway} - Home: ${totalHome}`);
   }
   return newArray;
 }
 
-console.log('task 5', scoreboard(getInningScore, inning, 9))
+console.log('task 5', scoreboard(getInningScore, inning, 3));
 
 
 
